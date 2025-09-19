@@ -45,7 +45,7 @@ const myPromise = new Promise((resolve, reject ) => {
 setTimeout(() => {
 const berhasil = true;
 if (berhasil) {
-  resolve("Data berhasil diambil dari server[...]");
+  resolve(mahasiswa);
 }else{
   reject("Data gagal diambil dari server[...]");
 }
@@ -53,8 +53,8 @@ if (berhasil) {
 });
 
 myPromise
-.then((pesan) => {
-console.log(pesan);
+.then((data) => {
+console.log("Data berhasil diambil dari server:", data);
 })
 .catch((error) => {
 console.error(error);
